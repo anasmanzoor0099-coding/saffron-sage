@@ -642,3 +642,181 @@ body {
     background: var(--cream);
     color: var(--text);
 }
+/* ============================================
+   EMOJI VISUAL CARDS
+   ============================================ */
+
+.menu-card__visual {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #faf7f2 0%, #e8dcc7 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card__visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(184, 147, 90, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.menu-card__emoji {
+    font-size: 5.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 12px rgba(184, 147, 90, 0.25));
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.menu-card:hover .menu-card__emoji {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+/* Different color per category (optional) */
+.menu-card[data-category="appetizers"] .menu-card__visual {
+    background: linear-gradient(135deg, #fef9f3 0%, #fde8d0 100%);
+}
+
+.menu-card[data-category="mains"] .menu-card__visual {
+    background: linear-gradient(135deg, #fdf6f0 0%, #f5e0cc 100%);
+}
+
+.menu-card[data-category="bbq"] .menu-card__visual {
+    background: linear-gradient(135deg, #faf3ec 0%, #edd8c0 100%);
+}
+
+.menu-card[data-category="breads"] .menu-card__visual {
+    background: linear-gradient(135deg, #fdfaf4 0%, #f2e8d5 100%);
+}
+
+.menu-card[data-category="desserts"] .menu-card__visual {
+    background: linear-gradient(135deg, #fdf5f3 0%, #f5dcd8 100%);
+}
+
+.menu-card[data-category="drinks"] .menu-card__visual {
+    background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d0 100%);
+}/* ============================================
+   SVG ICON CARDS — Premium Design
+   ============================================ */
+
+.menu-card__icon {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1614 0%, #2a2420 100%);
+    color: var(--gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card__icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(184, 147, 90, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.menu-card__icon svg {
+    width: 64px;
+    height: 64px;
+    stroke: var(--gold);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.menu-card:hover .menu-card__icon svg {
+    transform: scale(1.15) rotate(-8deg);
+    stroke: var(--gold-light);
+}
+
+/* Category-specific gradients */
+.menu-card--appetizer .menu-card__icon {
+    background: linear-gradient(135deg, #2a1a1a 0%, #3a2020 100%);
+}
+
+.menu-card--main .menu-card__icon {
+    background: linear-gradient(135deg, #1a1614 0%, #2a2420 100%);
+}
+
+.menu-card--bbq .menu-card__icon {
+    background: linear-gradient(135deg, #2a1e14 0%, #3a2a1a 100%);
+}
+
+.menu-card--bread .menu-card__icon {
+    background: linear-gradient(135deg, #2a2418 0%, #3a3225 100%);
+}
+
+.menu-card--dessert .menu-card__icon {
+    background: linear-gradient(135deg, #2a1820 0%, #3a2430 100%);
+}
+
+.menu-card--drink .menu-card__icon {
+    background: linear-gradient(135deg, #1a2028 0%, #242a3a 100%);
+}/* ============================================
+   SVG ICON CARDS — Premium Design
+   ============================================ */
+
+.menu-card__icon {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1614 0%, #2a2420 100%);
+    color: var(--gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card__icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(184, 147, 90, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.menu-card__icon svg {
+    width: 64px;
+    height: 64px;
+    stroke: var(--gold);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.menu-card:hover .menu-card__icon svg {
+    transform: scale(1.15) rotate(-8deg);
+    stroke: var(--gold-light);
+}
+
+.menu-card--appetizer .menu-card__icon {
+    background: linear-gradient(135deg, #2a1a1a 0%, #3a2020 100%);
+}
+
+.menu-card--main .menu-card__icon {
+    background: linear-gradient(135deg, #1a1614 0%, #2a2420 100%);
+}
+
+.menu-card--bbq .menu-card__icon {
+    background: linear-gradient(135deg, #2a1e14 0%, #3a2a1a 100%);
+}
+
+.menu-card--bread .menu-card__icon {
+    background: linear-gradient(135deg, #2a2418 0%, #3a3225 100%);
+}
+
+.menu-card--dessert .menu-card__icon {
+    background: linear-gradient(135deg, #2a1820 0%, #3a2430 100%);
+}
+
+.menu-card--drink .menu-card__icon {
+    background: linear-gradient(135deg, #1a2028 0%, #242a3a 100%);
+}
