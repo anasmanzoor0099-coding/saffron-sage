@@ -3,7 +3,7 @@
    ============================================ */
 
 // ⚠️ Change this to your live backend URL when deployed
-const API_URL = 'http://localhost:5000/api/reservations';
+const API_URL = 'https://saffron-sage-api.vercel.app/api/reservations';
 
 document.addEventListener('DOMContentLoaded', () => {
 
