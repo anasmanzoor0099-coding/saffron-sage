@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery — Saffron &amp; Sage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Explore Saffron & Sage — a visual journey through our food, atmosphere, and craft." />
+    <meta name="keywords" content="restaurant gallery, pakistani food photos, fine dining interior" />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saffron-sage.vercel.app/gallery.html" />
+    <meta property="og:title" content="Gallery — Saffron &amp; Sage" />
+    <meta property="og:description" content="A visual journey through Saffron & Sage." />
+    <meta property="og:site_name" content="Saffron &amp; Sage" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gallery — Saffron &amp; Sage" />
+    <meta name="twitter:description" content="A visual journey through Saffron & Sage." />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="nav" id="nav">
+        <div class="container nav__inner">
+
+            <a href="index.html" class="nav__logo">
+                Saffron <span>&amp;</span> Sage
+            </a>
+
+            <nav class="nav__menu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="menu.html" class="nav__link">Menu</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="gallery.html" class="nav__link active">Gallery</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
+
+            <div class="nav__actions">
+                <a href="reservation.html" class="btn btn--gold">Reserve</a>
+            </div>
+
+            <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-menu__nav">
+                <a href="index.html" class="mobile-menu__link">Home</a>
+                <a href="menu.html" class="mobile-menu__link">Menu</a>
+                <a href="about.html" class="mobile-menu__link">About</a>
+                <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+                <a href="contact.html" class="mobile-menu__link">Contact</a>
+                <a href="reservation.html" class="mobile-menu__link mobile-menu__link--cta">Reserve a Table</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="gallery-hero">
+        <div class="container">
+            <p class="gallery-hero__eyebrow">Gallery</p>
+            <h1 class="gallery-hero__title">
+                A look inside <em>Saffron &amp; Sage</em>
+            </h1>
+            <p class="gallery-hero__subtitle">
+                Every dish, every corner, every detail — captured with intention.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FILTER TABS -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="gallery-filter__tabs" id="galleryTabs">
+                <button class="gallery-tab active" data-category="all">All</button>
+                <button class="gallery-tab" data-category="food">Food</button>
+                <button class="gallery-tab" data-category="interior">Interior</button>
+                <button class="gallery-tab" data-category="chef">Chef</button>
+                <button class="gallery-tab" data-category="events">Events</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- GALLERY GRID -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gallery-item gallery-item--tall" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1000&q=80" alt="Signature Biryani" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Signature Biryani</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=80" alt="Dining room" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Main Dining Room</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=1000&q=80" alt="Seekh Kebab" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Seekh Kebab</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item--wide" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=80" alt="Restaurant interior" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Evening Ambience</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="chef">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1000&q=80" alt="Chef at work" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Chef Ahmed Khan</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1000&q=80" alt="Butter Chicken" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Butter Chicken</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item--tall" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000&q=80" alt="Private event" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Private Dining</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=1000&q=80" alt="Palak Paneer" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Palak Paneer</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1000&q=80" alt="Bar area" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">The Bar</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item--wide" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80" alt="Celebration" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Celebrations</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="chef">
+                    <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=1000&q=80" alt="Kitchen" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">The Kitchen</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1000&q=80" alt="Samosa" />
+                    <div class="gallery-item__overlay">
+                        <span class="gallery-item__label">Vegetable Samosa</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+        <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous">‹</button>
+        <button class="lightbox__next" id="lightboxNext" aria-label="Next">›</button>
+        <div class="lightbox__content">
+            <img src="" alt="" id="lightboxImage" />
+            <p class="lightbox__caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+
+    <!-- CTA RESERVE -->
+    <section class="cta-reserve">
+        <div class="container">
+            <div class="cta-reserve__card">
+                <p class="cta-reserve__eyebrow">Reservations</p>
+                <h2 class="cta-reserve__title">
+                    Reserve your table tonight
+                </h2>
+                <p class="cta-reserve__text">
+                    Walk-ins welcome, but reservations recommended.
+                </p>
+                <a href="reservation.html" class="btn btn--gold btn--lg">
+                    Make a Reservation
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+
+            <div class="footer__brand">
+                <div class="logo">Saffron <span>&amp;</span> Sage</div>
+                <p class="footer__tagline">
+                    A symphony of Pakistani flavors.
+                </p>
+            </div>
+
+            <div class="footer__links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="reservation.html">Reservations</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer__copy">
+                © 2025 Saffron &amp; Sage. Crafted with passion.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>

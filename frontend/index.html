@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saffron &amp; Sage — Fine Dining Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===== SEO META TAGS ===== -->
+    <meta name="description" content="Saffron & Sage — A symphony of Pakistani flavors. Fine dining restaurant offering authentic cuisine in an elegant atmosphere." />
+    <meta name="keywords" content="fine dining, pakistani restaurant, saffron and sage, luxury restaurant, desi cuisine" />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saffron-sage.vercel.app" />
+    <meta property="og:title" content="Saffron &amp; Sage — Fine Dining Restaurant" />
+    <meta property="og:description" content="A symphony of Pakistani flavors in an elegant setting." />
+    <meta property="og:site_name" content="Saffron &amp; Sage" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saffron &amp; Sage — Fine Dining Restaurant" />
+    <meta name="twitter:description" content="A symphony of Pakistani flavors." />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- ===== STYLESHEETS ===== -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+    <!-- ============================
+         NAVIGATION
+         ============================ -->
+    <header class="nav" id="nav">
+    <div class="container nav__inner">
+
+        <a href="index.html" class="nav__logo">
+            Saffron <span>&amp;</span> Sage
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav__menu">
+            <a href="index.html" class="nav__link active">Home</a>
+            <a href="menu.html" class="nav__link">Menu</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="gallery.html" class="nav__link">Gallery</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+        </nav>
+
+        <div class="nav__actions">
+            <a href="reservation.html" class="btn btn--gold">Reserve</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link">Home</a>
+            <a href="menu.html" class="mobile-menu__link">Menu</a>
+            <a href="about.html" class="mobile-menu__link">About</a>
+            <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+            <a href="contact.html" class="mobile-menu__link">Contact</a>
+            <a href="reservation.html" class="mobile-menu__link mobile-menu__link--cta">Reserve a Table</a>
+        </nav>
+    </div>
+</header>
+
+
+    <!-- ============================
+         HERO SECTION
+         ============================ -->
+    <section class="hero">
+        <div class="hero__bg">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="Fine dining atmosphere" />
+            <div class="hero__overlay"></div>
+        </div>
+
+        <div class="container hero__inner">
+            <p class="hero__eyebrow">Est. 2025 — Pakistani Fine Dining</p>
+
+            <h1 class="hero__title">
+                Saffron <span class="text-italic">&amp;</span> Sage
+            </h1>
+
+            <p class="hero__subtitle">
+                A symphony of Pakistani flavors, crafted with passion
+                and served with elegance.
+            </p>
+
+            <div class="hero__actions">
+                <a href="reservation.html" class="btn btn--gold btn--lg">
+                    Reserve a Table
+                </a>
+                <a href="menu.html" class="btn btn--outline-light btn--lg">
+                    View Menu
+                </a>
+            </div>
+        </div>
+
+        <div class="hero__scroll">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+
+    <!-- ============================
+         INTRO SECTION
+         ============================ -->
+    <section class="intro">
+        <div class="container intro__inner">
+
+            <div class="intro__label">
+                <span>Our Story</span>
+            </div>
+
+            <div class="intro__content">
+                <h2 class="intro__title">
+                    Where tradition meets <em>artistry</em>
+                </h2>
+
+                <p class="intro__text">
+                    Every dish at Saffron &amp; Sage tells a story — of spices
+                    hand-picked from ancient markets, recipes passed down
+                    through generations, and a passion for excellence that
+                    drives every plate we serve.
+                </p>
+
+                <a href="about.html" class="btn btn--dark">
+                    Read Our Story
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================
+         SIGNATURE DISHES
+         ============================ -->
+    <section class="dishes">
+        <div class="container">
+
+            <div class="section-header">
+                <p class="section-header__eyebrow">From the Kitchen</p>
+                <h2 class="section-header__title">
+                    Signature Dishes
+                </h2>
+                <p class="section-header__text">
+                    A curated selection of our chef's finest creations
+                </p>
+            </div>
+
+            <div class="dishes__grid">
+
+                <article class="dish-card">
+                    <div class="dish-card__image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80" alt="Chicken Biryani" />
+                    </div>
+                    <div class="dish-card__content">
+                        <div class="dish-card__header">
+                            <h3 class="dish-card__name">Signature Biryani</h3>
+                            <span class="dish-card__price">Rs 1,850</span>
+                        </div>
+                        <p class="dish-card__desc">
+                            Aromatic basmati rice layered with tender meat,
+                            saffron, and house-ground spices.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="dish-card">
+                    <div class="dish-card__image">
+                        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=800&q=80" alt="Seekh Kebab" />
+                    </div>
+                    <div class="dish-card__content">
+                        <div class="dish-card__header">
+                            <h3 class="dish-card__name">Seekh Kebab</h3>
+                            <span class="dish-card__price">Rs 1,450</span>
+                        </div>
+                        <p class="dish-card__desc">
+                            Hand-minced beef kebabs grilled over open flame
+                            with fresh herbs and spices.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="dish-card">
+                    <div class="dish-card__image">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80" alt="Butter Chicken" />
+                    </div>
+                    <div class="dish-card__content">
+                        <div class="dish-card__header">
+                            <h3 class="dish-card__name">Butter Chicken</h3>
+                            <span class="dish-card__price">Rs 1,650</span>
+                        </div>
+                        <p class="dish-card__desc">
+                            Tandoor-roasted chicken simmered in a silky tomato
+                            and cream sauce with aromatic spices.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="dishes__cta">
+                <a href="menu.html" class="btn btn--outline">
+                    View Full Menu
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================
+         EXPERIENCE SECTION
+         ============================ -->
+    <section class="experience">
+        <div class="experience__bg">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" alt="Restaurant interior" />
+            <div class="experience__overlay"></div>
+        </div>
+
+        <div class="container experience__inner">
+
+            <div class="experience__content">
+                <p class="experience__eyebrow">The Experience</p>
+
+                <h2 class="experience__title">
+                    More than a meal —<br />
+                    <em>a memory in the making</em>
+                </h2>
+
+                <p class="experience__text">
+                    Soft lighting, warm hospitality, and flavors that linger.
+                    At Saffron &amp; Sage, every visit is designed to be
+                    unforgettable.
+                </p>
+
+                <a href="reservation.html" class="btn btn--gold">
+                    Book Your Evening
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================
+         RESERVATION CTA
+         ============================ -->
+    <section class="cta-reserve">
+        <div class="container">
+
+            <div class="cta-reserve__card">
+                <p class="cta-reserve__eyebrow">Reservations</p>
+
+                <h2 class="cta-reserve__title">
+                    Reserve your table tonight
+                </h2>
+
+                <p class="cta-reserve__text">
+                    Walk-ins welcome, but reservations recommended.
+                    Book online in under a minute.
+                </p>
+
+                <a href="reservation.html" class="btn btn--gold btn--lg">
+                    Make a Reservation
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================
+         FOOTER
+         ============================ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+
+            <div class="footer__brand">
+                <div class="logo">Saffron <span>&amp;</span> Sage</div>
+                <p class="footer__tagline">
+                    A symphony of Pakistani flavors.
+                </p>
+            </div>
+
+            <div class="footer__links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="reservation.html">Reservations</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer__copy">
+                © 2025 Saffron &amp; Sage. Crafted with passion.
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ============================
+         SCRIPTS
+         ============================ -->
+    <script src="js/home.js"></script>
+
+</body>
+</html>

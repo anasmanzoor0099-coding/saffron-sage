@@ -1,0 +1,81 @@
+/* ============================================
+   DESIGN TOKENS — Saffron & Sage
+   ============================================ */
+
+:root {
+    /* ===== COLORS ===== */
+    --cream: #faf7f2;
+    --cream-dark: #f0e8db;
+    --beige: #e8dcc7;
+    --beige-dark: #d4c5a9;
+
+    --gold: #b8935a;
+    --gold-dark: #9a7a45;
+    --gold-light: #d4b88a;
+
+    --brown: #6b5744;
+    --brown-light: #8a7355;
+
+    --dark: #1a1614;
+    --dark-soft: #2a2420;
+    --dark-medium: #3a3229;
+
+    --text: #1a1614;
+    --text-muted: #6b5744;
+    --text-dim: #a89880;
+
+    --white: #ffffff;
+    --off-white: #faf7f2;
+
+    --border: #e0d4bf;
+    --border-dark: #4a3f35;
+
+    /* ===== GRADIENTS ===== */
+    --gradient-gold: linear-gradient(135deg, #b8935a 0%, #d4b88a 100%);
+    --gradient-dark: linear-gradient(135deg, #1a1614 0%, #2a2420 100%);
+
+    /* ===== TYPOGRAPHY ===== */
+    --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 2rem;
+    --fs-4xl: 2.5rem;
+    --fs-5xl: 3.5rem;
+    --fs-6xl: 4.5rem;
+
+    /* ===== SPACING ===== */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 5rem;
+    --space-3xl: 8rem;
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* ===== SHADOWS ===== */
+    --shadow-sm: 0 2px 8px rgba(26, 22, 20, 0.08);
+    --shadow-md: 0 8px 24px rgba(26, 22, 20, 0.12);
+    --shadow-lg: 0 20px 50px rgba(26, 22, 20, 0.18);
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* ===== LAYOUT ===== */
+    --container-max: 1300px;
+    --container-narrow: 900px;
+    --container-padding: 1.5rem;
+}

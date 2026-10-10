@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu — Saffron &amp; Sage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===== SEO META TAGS ===== -->
+    <meta name="description" content="Explore our menu — authentic Pakistani fine dining with signature biryani, karahi, BBQ, and desserts." />
+    <meta name="keywords" content="pakistani menu, biryani, karahi, bbq, fine dining menu" />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saffron-sage.vercel.app/menu.html" />
+    <meta property="og:title" content="Menu — Saffron &amp; Sage" />
+    <meta property="og:description" content="Authentic Pakistani fine dining menu." />
+    <meta property="og:site_name" content="Saffron &amp; Sage" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Menu — Saffron &amp; Sage" />
+    <meta name="twitter:description" content="Authentic Pakistani fine dining menu." />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+
+    <!-- ============================
+         NAVIGATION
+         ============================ -->
+    <header class="nav" id="nav">
+        <div class="container nav__inner">
+
+            <a href="index.html" class="nav__logo">
+                Saffron <span>&amp;</span> Sage
+            </a>
+
+            <nav class="nav__menu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="menu.html" class="nav__link active">Menu</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
+
+            <div class="nav__actions">
+                <a href="reservation.html" class="btn btn--gold">Reserve</a>
+            </div>
+
+            <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-menu__nav">
+                <a href="index.html" class="mobile-menu__link">Home</a>
+                <a href="menu.html" class="mobile-menu__link">Menu</a>
+                <a href="about.html" class="mobile-menu__link">About</a>
+                <a href="gallery.html" class="mobile-menu__link">Gallery</a>
+                <a href="contact.html" class="mobile-menu__link">Contact</a>
+                <a href="reservation.html" class="mobile-menu__link mobile-menu__link--cta">Reserve a Table</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ============================
+         MENU HERO
+         ============================ -->
+    <section class="menu-hero">
+        <div class="container">
+            <p class="menu-hero__eyebrow">Our Menu</p>
+            <h1 class="menu-hero__title">
+                A Symphony of <em>Flavors</em>
+            </h1>
+            <p class="menu-hero__subtitle">
+                Every dish tells a story — of ancient spices, timeless recipes,
+                and the craft of fine Pakistani dining.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ============================
+         CATEGORY FILTER
+         ============================ -->
+    <section class="menu-filter">
+        <div class="container">
+            <div class="menu-filter__tabs" id="menuTabs">
+                <button class="menu-tab active" data-category="all">All Dishes</button>
+                <button class="menu-tab" data-category="appetizers">Appetizers</button>
+                <button class="menu-tab" data-category="mains">Mains</button>
+                <button class="menu-tab" data-category="bbq">BBQ</button>
+                <button class="menu-tab" data-category="breads">Breads</button>
+                <button class="menu-tab" data-category="desserts">Desserts</button>
+                <button class="menu-tab" data-category="drinks">Drinks</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================
+         MENU GRID
+         ============================ -->
+    <section class="menu-grid-section">
+        <div class="container">
+            <div class="menu-grid" id="menuGrid">
+
+                <!-- ===== APPETIZERS ===== -->
+                <article class="menu-card" data-category="appetizers">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80" alt="Samosa" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Vegetable Samosa</h3>
+                            <span class="menu-card__price">Rs 350</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Crispy pastry filled with spiced potatoes, peas, and fresh herbs.
+                        </p>
+                        <span class="menu-card__tag">Appetizer</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="appetizers">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&q=80" alt="Pakora" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Mixed Pakora Platter</h3>
+                            <span class="menu-card__price">Rs 450</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Assorted vegetable fritters, crisp outside, tender inside.
+                        </p>
+                        <span class="menu-card__tag">Appetizer</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="appetizers">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80" alt="Seekh Kebab" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Seekh Kebab</h3>
+                            <span class="menu-card__price">Rs 850</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Hand-minced beef kebabs, grilled over open flame with herbs.
+                        </p>
+                        <span class="menu-card__tag">Appetizer</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="appetizers">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?w=800&q=80" alt="Chicken Tikka" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Chicken Tikka</h3>
+                            <span class="menu-card__price">Rs 750</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Tandoor-grilled chicken marinated in yogurt and spices.
+                        </p>
+                        <span class="menu-card__tag">Appetizer</span>
+                    </div>
+                </article>
+
+                <!-- ===== MAINS ===== -->
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80" alt="Biryani" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Signature Chicken Biryani</h3>
+                            <span class="menu-card__price">Rs 1,850</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Fragrant basmati rice, saffron, tender chicken, house-ground spices.
+                        </p>
+                        <span class="menu-card__tag">Main Course</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=800&q=80" alt="Karahi" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Mutton Karahi</h3>
+                            <span class="menu-card__price">Rs 2,200</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Slow-cooked mutton in tomato, ginger, and green chili.
+                        </p>
+                        <span class="menu-card__tag">Main Course</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80" alt="Nihari" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Beef Nihari</h3>
+                            <span class="menu-card__price">Rs 1,650</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Slow-cooked beef shank in aromatic spiced gravy, overnight simmered.
+                        </p>
+                        <span class="menu-card__tag">Main Course</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80" alt="Butter Chicken" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Butter Chicken</h3>
+                            <span class="menu-card__price">Rs 1,650</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Tandoor-roasted chicken in silky tomato-cream sauce.
+                        </p>
+                        <span class="menu-card__tag">Main Course</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80" alt="Haleem" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Beef Haleem</h3>
+                            <span class="menu-card__price">Rs 1,200</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Wheat, lentils, and tender beef slow-cooked to a silky texture.
+                        </p>
+                        <span class="menu-card__tag">Main Course</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800&q=80" alt="Palak Paneer" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Palak Paneer</h3>
+                            <span class="menu-card__price">Rs 1,100</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Fresh spinach puree with soft paneer cubes and mild spices.
+                        </p>
+                        <span class="menu-card__tag">Vegetarian</span>
+                    </div>
+                </article>
+
+                <!-- ===== BBQ ===== -->
+                <article class="menu-card" data-category="bbq">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80" alt="Chicken Boti" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Chicken Boti</h3>
+                            <span class="menu-card__price">Rs 950</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Charcoal-grilled chicken cubes with traditional spices.
+                        </p>
+                        <span class="menu-card__tag">From the Grill</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="bbq">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=800&q=80" alt="Malai Boti" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Malai Boti</h3>
+                            <span class="menu-card__price">Rs 1,100</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Creamy yogurt-marinated chicken, grilled to perfection.
+                        </p>
+                        <span class="menu-card__tag">From the Grill</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="bbq">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Mutton Chops" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Mutton Chops</h3>
+                            <span class="menu-card__price">Rs 1,400</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Tender lamb chops, marinated overnight, grilled over charcoal.
+                        </p>
+                        <span class="menu-card__tag">From the Grill</span>
+                    </div>
+                </article>
+
+                <!-- ===== BREADS ===== -->
+                <article class="menu-card" data-category="breads">
+                    <div class="menu-card__image">
+<img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=800&q=80" alt="Tandoori Naan" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Tandoori Naan</h3>
+                            <span class="menu-card__price">Rs 80</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Fresh clay-oven baked naan, soft and pillowy.
+                        </p>
+                        <span class="menu-card__tag">Breads</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="breads">
+                    <div class="menu-card__image">
+<img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80" alt="Garlic Naan" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Garlic Naan</h3>
+                            <span class="menu-card__price">Rs 150</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Naan brushed with garlic butter and fresh coriander.
+                        </p>
+                        <span class="menu-card__tag">Breads</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="breads">
+                    <div class="menu-card__image">
+<img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80" alt="Kulcha" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Kulcha</h3>
+                            <span class="menu-card__price">Rs 120</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Traditional stuffed flatbread, served hot from the tandoor.
+                        </p>
+                        <span class="menu-card__tag">Breads</span>
+                    </div>
+                </article>
+
+                <!-- ===== DESSERTS ===== -->
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1601303516361-4e5e54c2cec4?w=800&q=80" alt="Gulab Jamun" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Gulab Jamun</h3>
+                            <span class="menu-card__price">Rs 350</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Soft milk dumplings soaked in rose-cardamom syrup.
+                        </p>
+                        <span class="menu-card__tag">Dessert</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1601303516361-4e5e54c2cec4?w=800&q=80" alt="Kheer" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Rice Kheer</h3>
+                            <span class="menu-card__price">Rs 300</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Creamy rice pudding with saffron, pistachios, and almonds.
+                        </p>
+                        <span class="menu-card__tag">Dessert</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1601303516361-4e5e54c2cec4?w=800&q=80" alt="Ras Malai" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Ras Malai</h3>
+                            <span class="menu-card__price">Rs 400</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Soft paneer discs in saffron-infused sweetened milk.
+                        </p>
+                        <span class="menu-card__tag">Dessert</span>
+                    </div>
+                </article>
+
+                <!-- ===== DRINKS ===== -->
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=800&q=80" alt="Lassi" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Sweet Lassi</h3>
+                            <span class="menu-card__price">Rs 250</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Traditional yogurt drink, chilled and lightly sweetened.
+                        </p>
+                        <span class="menu-card__tag">Beverage</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80" alt="Mango Shake" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Mango Shake</h3>
+                            <span class="menu-card__price">Rs 350</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Fresh seasonal mangoes blended with milk and ice.
+                        </p>
+                        <span class="menu-card__tag">Beverage</span>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=80" alt="Chai" />
+                    </div>
+                    <div class="menu-card__content">
+                        <div class="menu-card__header">
+                            <h3 class="menu-card__name">Masala Chai</h3>
+                            <span class="menu-card__price">Rs 200</span>
+                        </div>
+                        <p class="menu-card__desc">
+                            Aromatic spiced tea brewed with milk and fresh ginger.
+                        </p>
+                        <span class="menu-card__tag">Beverage</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Empty State -->
+            <div class="menu-empty" id="menuEmpty">
+                <p>No dishes in this category yet.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================
+         CTA RESERVE
+         ============================ -->
+    <section class="cta-reserve">
+        <div class="container">
+            <div class="cta-reserve__card">
+                <p class="cta-reserve__eyebrow">Reservations</p>
+                <h2 class="cta-reserve__title">
+                    Reserve your table tonight
+                </h2>
+                <p class="cta-reserve__text">
+                    Walk-ins welcome, but reservations recommended.
+                    Book online in under a minute.
+                </p>
+                <a href="reservation.html" class="btn btn--gold btn--lg">
+                    Make a Reservation
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================
+         FOOTER
+         ============================ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+
+            <div class="footer__brand">
+                <div class="logo">Saffron <span>&amp;</span> Sage</div>
+                <p class="footer__tagline">
+                    A symphony of Pakistani flavors.
+                </p>
+            </div>
+
+            <div class="footer__links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="reservation.html">Reservations</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer__copy">
+                © 2025 Saffron &amp; Sage. Crafted with passion.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
