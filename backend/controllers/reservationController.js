@@ -78,7 +78,80 @@ const getAllReservations = async (req, res) => {
     }
 };
 
+// ===== UPDATE RESERVATION STATUS =====
+// PUT /api/reservations/:id
+const updateReservationStatus = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { status } = req.body;
+
+        const validStatuses = ['pending', 'confirmed', 'cancelled', 'completed'];
+
+        if (!status || !validStatuses.includes(status)) {
+            return res.status(400).json({
+                success: false,
+                message: 'Invalid status. Must be: pending, confirmed, cancelled, or completed.',
+            });
+        }
+
+        const reservation = await Reservation.findByIdAndUpdate(
+            id,
+            { status },
+            { new: true, runValidators: true }
+        );
+
+        if (!reservation) {
+            return res.status(404).json({
+                success: false,
+                message: 'Reservation not found',
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: `Reservation ${status} successfully`,
+            reservation,
+        });
+    } catch (error) {
+        console.error('Update status error:', error);
+        res.status(500).json({
+            success: false,
+            message: error.message || 'Server error',
+        });
+    }
+};
+
+// ===== DELETE RESERVATION =====
+// DELETE /api/reservations/:id
+const deleteReservation = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const reservation = await Reservation.findByIdAndDelete(id);
+
+        if (!reservation) {
+            return res.status(404).json({
+                success: false,
+                message: 'Reservation not found',
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Reservation deleted successfully',
+        });
+    } catch (error) {
+        console.error('Delete reservation error:', error);
+        res.status(500).json({
+            success: false,
+            message: error.message || 'Server error',
+        });
+    }
+};
+
 module.exports = {
     createReservation,
     getAllReservations,
+    updateReservationStatus,
+    deleteReservation,
 };

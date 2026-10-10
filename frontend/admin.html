@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — Saffron &amp; Sage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+    <!-- ============================
+         LOGIN SCREEN
+         ============================ -->
+    <div class="admin-login" id="adminLogin">
+        <div class="admin-login__box">
+            <a href="index.html" class="logo admin-login__logo">
+                Saffron <span>&amp;</span> Sage
+            </a>
+
+            <h1 class="admin-login__title">Admin Access</h1>
+            <p class="admin-login__subtitle">Enter password to continue</p>
+
+            <form id="loginForm" class="admin-login__form">
+                <div class="admin-login__input-wrapper">
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        class="admin-login__input"
+                        placeholder="Enter password"
+                        required
+                    />
+                </div>
+
+                <div class="admin-login__message" id="loginMessage"></div>
+
+                <button type="submit" class="admin-login__btn">
+                    Access Dashboard
+                </button>
+            </form>
+
+            <p class="admin-login__hint">
+                💡 Demo password: <code>saffron2025</code>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- ============================
+         ADMIN DASHBOARD
+         ============================ -->
+    <div class="admin-dash" id="adminDash" style="display: none;">
+
+        <!-- TOPBAR -->
+        <header class="admin-topbar">
+            <a href="index.html" class="admin-topbar__logo">
+                Saffron <span>&amp;</span> Sage
+                <small>ADMIN</small>
+            </a>
+
+            <div class="admin-topbar__actions">
+                <button class="admin-topbar__btn" id="refreshBtn" title="Refresh">
+                    🔄 Refresh
+                </button>
+                <a href="index.html" class="admin-topbar__btn" target="_blank">
+                    🌐 View Site
+                </a>
+                <button class="admin-topbar__btn admin-topbar__btn--logout" id="logoutBtn">
+                    ↪ Logout
+                </button>
+            </div>
+        </header>
+
+
+        <!-- MAIN -->
+        <main class="admin-main">
+
+            <!-- PAGE HEADER -->
+            <div class="admin-page-header">
+                <div>
+                    <h1 class="admin-page-title">Reservations</h1>
+                    <p class="admin-page-subtitle">Manage all table bookings</p>
+                </div>
+            </div>
+
+
+            <!-- STATS CARDS -->
+            <div class="admin-stats" id="statsGrid">
+
+                <div class="admin-stat admin-stat--purple">
+                    <div class="admin-stat__icon">📊</div>
+                    <div class="admin-stat__content">
+                        <div class="admin-stat__value" id="statTotal">0</div>
+                        <div class="admin-stat__label">Total Reservations</div>
+                    </div>
+                </div>
+
+                <div class="admin-stat admin-stat--gold">
+                    <div class="admin-stat__icon">📅</div>
+                    <div class="admin-stat__content">
+                        <div class="admin-stat__value" id="statToday">0</div>
+                        <div class="admin-stat__label">Today</div>
+                    </div>
+                </div>
+
+                <div class="admin-stat admin-stat--green">
+                    <div class="admin-stat__icon">✅</div>
+                    <div class="admin-stat__content">
+                        <div class="admin-stat__value" id="statConfirmed">0</div>
+                        <div class="admin-stat__label">Confirmed</div>
+                    </div>
+                </div>
+
+                <div class="admin-stat admin-stat--orange">
+                    <div class="admin-stat__icon">⏳</div>
+                    <div class="admin-stat__content">
+                        <div class="admin-stat__value" id="statPending">0</div>
+                        <div class="admin-stat__label">Pending</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS + SEARCH -->
+            <div class="admin-controls">
+                <div class="admin-filters" id="filterTabs">
+                    <button class="admin-filter active" data-filter="all">All</button>
+                    <button class="admin-filter" data-filter="today">Today</button>
+                    <button class="admin-filter" data-filter="confirmed">Confirmed</button>
+                    <button class="admin-filter" data-filter="pending">Pending</button>
+                    <button class="admin-filter" data-filter="cancelled">Cancelled</button>
+                    <button class="admin-filter" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="admin-search">
+                    <span class="admin-search__icon">🔍</span>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="admin-search__input"
+                        placeholder="Search by name, email, phone..."
+                    />
+                </div>
+            </div>
+
+
+            <!-- LOADING STATE -->
+            <div class="admin-loading" id="loadingState">
+                <div class="admin-loading__spinner"></div>
+                <p>Loading reservations...</p>
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div class="admin-empty" id="emptyState" style="display: none;">
+                <div class="admin-empty__icon">📭</div>
+                <h3>No reservations found</h3>
+                <p>Reservations will appear here when customers book.</p>
+            </div>
+
+
+            <!-- RESERVATIONS TABLE -->
+            <div class="admin-table-wrapper" id="tableWrapper" style="display: none;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Guest</th>
+                            <th>Contact</th>
+                            <th>Date & Time</th>
+                            <th>Party</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reservationTableBody">
+                        <!-- Rows inserted by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- DELETE CONFIRMATION MODAL -->
+    <div class="admin-modal" id="deleteModal">
+        <div class="admin-modal__overlay"></div>
+        <div class="admin-modal__content">
+            <h3 class="admin-modal__title">Delete Reservation?</h3>
+            <p class="admin-modal__text">
+                This action <strong>cannot be undone</strong>. Are you sure you want to delete this reservation?
+            </p>
+            <div class="admin-modal__actions">
+                <button class="admin-modal__btn admin-modal__btn--ghost" id="cancelDelete">
+                    Cancel
+                </button>
+                <button class="admin-modal__btn admin-modal__btn--danger" id="confirmDelete">
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
